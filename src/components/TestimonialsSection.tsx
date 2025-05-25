@@ -10,7 +10,8 @@ export const TestimonialsSection = () => {
       quote: "Anand transformed my LinkedIn presence completely. Within weeks, I was getting quality connection requests and job offers.",
       author: "Sarah Johnson",
       role: "Marketing Director",
-      avatar: "SJ"
+      avatar: "SJ",
+      service: "LinkedIn Personal Branding"
     }
   ];
 
@@ -23,7 +24,7 @@ export const TestimonialsSection = () => {
         
         <div className="relative">
           <Card className="service-card p-8 text-center min-h-[300px] flex flex-col justify-center">
-            <div className="text-4xl text-primary mb-6">"</div>
+            <div className="text-2xl text-primary mb-6 italic">"For my {testimonials[currentTestimonial].service} work"</div>
             <blockquote className="text-lg md:text-xl text-foreground mb-8 leading-relaxed">
               {testimonials[currentTestimonial].quote}
             </blockquote>
