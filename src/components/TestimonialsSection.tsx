@@ -11,18 +11,6 @@ export const TestimonialsSection = () => {
       author: "Sarah Johnson",
       role: "Marketing Director",
       avatar: "SJ"
-    },
-    {
-      quote: "The website Anand built for us exceeded all expectations. Modern, fast, and perfectly represents our brand.",
-      author: "Michael Chen",
-      role: "Startup Founder",
-      avatar: "MC"
-    },
-    {
-      quote: "His technical writing skills are exceptional. The documentation he created made our complex product accessible to everyone.",
-      author: "Emily Rodriguez",
-      role: "Product Manager",
-      avatar: "ER"
     }
   ];
 

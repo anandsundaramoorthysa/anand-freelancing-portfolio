@@ -104,7 +104,7 @@ const Index = () => {
       <main className="pt-20">
         <HeroSection />
         <AboutSection />
-        <PortfolioSection />
+        {/* <PortfolioSection /> */}
         <ClientsSection />
         <TestimonialsSection />
         <ContactSection />
