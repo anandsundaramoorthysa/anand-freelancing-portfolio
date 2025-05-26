@@ -76,11 +76,17 @@
       0 2px 8px rgba(0, 0, 0, 0.08),
       inset 0 1px 0 rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(148, 163, 184, 0.2);
+    /* Removed initial swing animation here. It will be added conditionally by JS. */
+  }
+
+  /* Define the swing animation specifically for when it's NOT being dragged */
+  .id-card.swing-animation {
+    animation: swing 4s ease-in-out infinite; /* Apply swing animation */
   }
 
   .lanyard {
-    background: linear-gradient(180deg, #64748b 0%, #475569 100%);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    /* Background on SVG is typically not needed, controlled by stroke */
+    /* box-shadow is controlled by drop-shadow-sm class */
   }
 
   .scanner-zone {
@@ -117,5 +123,46 @@
   .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Keyframe for the initial swing animation */
+  @keyframes swing {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(2deg);
+    }
+    75% {
+      transform: rotate(-2deg);
+    }
+  }
+
+  /* Keyframe for the ID card unlock animation */
+  @keyframes unlock {
+    0% {
+      transform: translateY(0) rotateX(0deg) rotateY(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px) rotateX(45deg) rotateY(20deg) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  /* For the welcome text and scanner zone to fade in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-content {
+    animation: fadeIn 1s ease-out forwards;
   }
 }
