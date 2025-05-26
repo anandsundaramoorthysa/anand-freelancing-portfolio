@@ -63,14 +63,10 @@
     height: 300px;
     border-radius: 50%;
     background: rgba(14, 165, 233, 0.1);
-    /* A solid, translucent color */
     filter: blur(50px);
-    /* <--- ADD THIS (adjust pixels for desired blur) */
     pointer-events: none;
     z-index: 9999;
-    /* <--- IMPORTANT: Set a very high z-index to ensure visibility */
     transition: transform 0.15s ease-out;
-    /* remove mix-blend-mode property entirely */
   }
 
   .id-card {

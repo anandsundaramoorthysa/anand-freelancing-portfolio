@@ -20,7 +20,7 @@ export const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section id='testimonials' className="py-20 px-6">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           What Clients Say
@@ -45,7 +45,6 @@ export const TestimonialsSection = () => {
             </div>
           </Card>
 
-          {/* Navigation */}
           <div className="flex justify-center gap-2 mt-8">
             {testimonials.map((_, index) => (
               <button

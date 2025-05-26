@@ -17,8 +17,8 @@ import { ContactSection } from '@/components/ContactSection';
 const Index = () => {
   const [showPortfolio, setShowPortfolio] = useState(false);
   const [isUnlocked, setIsUnlocked] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
-  
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const currentYear = new Date().getFullYear();
 
   const handleUnlock = () => {
@@ -58,8 +58,8 @@ const Index = () => {
 
           <div className="hidden md:flex items-center gap-6">
             <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
-            <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">Portfolio</a>
+            <a href="#clients" className="text-foreground hover:text-primary transition-colors">My Clients</a>
+            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">Testimonials</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
           </div>
 
@@ -69,7 +69,7 @@ const Index = () => {
               size="icon"
               onClick={toggleMobileMenu}
               aria-label="Toggle navigation"
-              className="focus-visible:ring-offset-background focus-visible:ring-ring focus-visible:ring-2" // Focus styles for accessibility
+              className="focus-visible:ring-offset-background focus-visible:ring-ring focus-visible:ring-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,8 +93,8 @@ const Index = () => {
           <div className="md:hidden bg-background/90 backdrop-blur-md pb-4 pt-2 border-t border-border">
             <div className="flex flex-col items-center gap-4">
               <a href="#about" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">About</a>
-              <a href="#services" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Services</a>
-              <a href="#portfolio" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Portfolio</a>
+              <a href="#clients" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Work</a> 
+              <a href="#testimonials" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Clients Say</a> 
               <a href="#contact" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Contact</a>
             </div>
           </div>
@@ -104,8 +104,8 @@ const Index = () => {
       <main className="pt-20">
         <HeroSection />
         <AboutSection />
-        {/* <PortfolioSection /> */}
-        <ClientsSection />
+        {/* <PortfolioSection /> */} 
+        <ClientsSection /> 
         <TestimonialsSection />
         <ContactSection />
       </main>

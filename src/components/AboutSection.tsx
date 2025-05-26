@@ -17,7 +17,6 @@ export const AboutSection = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center justify-center text-center md:text-left">
-          {/* Profile Photo */}
           <div className="flex justify-center">
             <div className="relative">
               <div className="w-96 h-96 bg-gradient-to-br from-primary-200 to-primary-400 rounded-2xl flex items-center justify-center shadow-2xl animate-blob-bounce transition-shadow duration-600 ease-out hover:scale-105 hover:shadow-primary-500/50">
@@ -34,7 +33,6 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          {/* Bio */}
           <div>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
               I'm a freelancer, helping individuals and startups build their online presence through clean websites, streamlined web management, and strong personal branding.
@@ -45,7 +43,6 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        {/* Standalone Services Section */}
         <div className="mt-20 text-center max-w-3xl mx-auto">
           <h3 className="text-4xl md:text-5xl font-bold text-center mb-16">My Services</h3>
           <div className="flex flex-wrap justify-center gap-3">

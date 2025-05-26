@@ -21,24 +21,20 @@ export const ClientsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted/30">
+    <section id="clients" className="py-20 px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Worked With
         </h2>
 
-        {/* This flex container ensures the grid is centered horizontally */}
-        <div className="flex justify-center w-full"> {/* Added w-full here */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mx-auto w-fit"> {/* Added mx-auto and w-fit here */}
+        <div className="flex justify-center w-full"> 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mx-auto w-fit">
             {clients.map((client, index) => (
               <div
                 key={client.name}
-                // 'group' and 'relative' are kept for consistency or if you add other hover effects later.
-                // The hover:shadow-xl is for the card itself, not the service text.
                 className="group relative bg-card border border-border rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 min-h-[380px] flex flex-col justify-between"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Logo */}
                 <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary-500 shadow-sm bg-white">
                   <img
                     src={client.image}
@@ -47,20 +43,14 @@ export const ClientsSection = () => {
                   />
                 </div>
 
-                {/* Name & Tag */}
                 <h3 className="font-semibold text-xl mb-1">{client.name}</h3>
                 <p className="text text-muted-foreground mb-2">{client.tag}</p>
 
-                {/* Service Description - Always visible in all views */}
                 <p className="text-md text-muted-foreground mt-2 mb-4">
                   {client.service}
                 </p>
 
-                {/* Removed the conditional Tooltip/Description div completely */}
-
-                {/* Buttons */}
                 <div className="mt-5 flex flex-col gap-3">
-                  {/* Show Website button only if it's a company */}
                   {client.url && (
                     <Button
                       asChild
@@ -73,7 +63,6 @@ export const ClientsSection = () => {
                     </Button>
                   )}
 
-                  {/* Show LinkedIn if available */}
                   {client.linkedin && (
                     <Button
                       asChild
