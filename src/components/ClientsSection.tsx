@@ -11,7 +11,7 @@ export const ClientsSection = () => {
       tag: 'LinkedIn Growth for Company'
     },
     {
-      name: 'SKJ Digital Media (Founder)',
+      name: 'SKJ Digital Media',
       image: 'https://media.licdn.com/dms/image/v2/C560BAQFszRaZYxdIyA/company-logo_200_200/company-logo_200_200/0/1631326137293?e=1753920000&v=beta&t=msmhrEcMEaeWhEHkuTStQM6lrbGWeXJTLSmr47jyOSg',
       url: 'https://digitalizewithnandy.com/',
       linkedin: 'https://www.linkedin.com/in/nandhineemuthu/',
