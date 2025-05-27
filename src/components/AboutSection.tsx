@@ -34,7 +34,7 @@ export const AboutSection = () => {
           </div>
 
           <div className="w-full flex justify-center">
-            <div className="max-w-prose text-center px-4 sm:px-6 md:px-0">
+            <div className="max-w-prose md:text-left text-center px-4 sm:px-6 md:px-0">
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-8 mb-6">
                 I'm a freelancer, helping individuals and startups build their online presence through clean websites, streamlined web management, and strong personal branding.
               </p>
