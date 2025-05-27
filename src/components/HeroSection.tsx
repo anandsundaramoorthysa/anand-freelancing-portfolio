@@ -51,7 +51,7 @@ export const HeroSection = () => {
 
         <div className="animate-fade-in-right relative order-first mt-12 flex items-center justify-center md:order-last md:mt-0 md:justify-end">
           <div
-            className="animate-blob-bounce transform shadow-2xl transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-primary-500/50 transition-transform duration-500 ease-out
+            className="md:animate-blob-bounce transform shadow-2xl transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-primary-500/50 transition-transform duration-500 ease-out
                                  relative h-72 w-72 overflow-hidden rounded-full border-4 border-primary-300 dark:border-primary-700
                                  md:h-80 md:w-80 lg:h-96 lg:w-96"
             style={{ animationDelay: '100ms', animationDuration: '8s' }}
@@ -63,13 +63,13 @@ export const HeroSection = () => {
             />
           </div>
 
-          <div className="animate-blob-bounce absolute top-4 left-10 md:left-auto md:right-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg dark:bg-gray-800">
+          <div className="md:animate-blob-bounce absolute top-4 left-10 md:left-auto md:right-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg dark:bg-gray-800">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
             </svg>
           </div>
 
-          <div className="animate-blob-bounce animation-delay-1500 absolute bottom-4 right-10 md:right-auto md:left-80 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg dark:bg-gray-800">
+          <div className="md:animate-blob-bounce animation-delay-1500 absolute bottom-4 right-10 md:right-auto md:left-80 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg dark:bg-gray-800">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
