@@ -7,17 +7,17 @@ export const ClientsSection = () => {
     {
       name: 'SecumintIT',
       image: 'https://secumintit.in/assets/img/logo.webp',
-      description: 'Helped the company establish a strong online presence.' // Added a description
+      description: 'Helped the company establish a strong online presence.' 
     },
     {
       name: 'SKJ Digital Media',
       image: 'https://media.licdn.com/dms/image/v2/C560BAQFszRaZYxdIyA/company-logo_200_200/company-logo_200_200/0/1631326137293?e=1753920000&v=beta&t=msmhrEcMEaeWhEHkuTStQM6lrbGWeXJTLSmr47jyOSg',
-      description: 'Provided digital marketing strategies and execution.' // Added a description
+      description: 'Provided digital marketing strategies and execution.' 
     },
     {
-      name: 'Karthik Agro Industries',
+      name: 'Karthik Agro',
       image: 'https://karthikagro.com/logo1.png',
-      description: 'Developed their corporate website and digital identity.' // Added a description
+      description: 'Developed their corporate website and digital identity.' 
     },
   ];
 

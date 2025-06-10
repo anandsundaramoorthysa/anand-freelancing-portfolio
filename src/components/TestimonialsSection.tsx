@@ -21,7 +21,7 @@ export const TestimonialsSection = () => {
     {
       quote: "I had a great experience working with Anand. He was very humble, cooperative, and showed a genuine eagerness to complete the work efficiently. His commitment to delivering quality and his openness to feedback truly made the process smooth and pleasant.",
       author: "Karthik Agro",
-      role: "Industries",
+      role: "Proprietor of Karthik Agro",
       service: "Website Development"
     },
   ];
