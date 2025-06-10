@@ -5,7 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
-// import { IDCardEntry } from '@/components/IDCardEntry'; // <--- We'll comment this out or remove it if not used
 import { CursorFollower } from '@/components/CursorFollower';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
@@ -15,17 +14,12 @@ import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { ContactSection } from '@/components/ContactSection';
 
 const Index = () => {
-  // --- CHANGE IS HERE ---
-  // Set showPortfolio to true initially so the main content renders immediately
   const [showPortfolio, setShowPortfolio] = useState(true);
-  // You might not need isUnlocked if the IDCardEntry is no longer the gatekeeper
-  const [isUnlocked, setIsUnlocked] = useState(true); // Set to true as content is "unlocked"
+  const [isUnlocked, setIsUnlocked] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const currentYear = new Date().getFullYear();
 
-  // The handleUnlock function won't be called in this setup,
-  // but it's harmless to keep it if you might reintroduce IDCardEntry later.
   const handleUnlock = () => {
     setIsUnlocked(true);
     setTimeout(() => {
@@ -42,20 +36,6 @@ const Index = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // --- REMOVE THIS CONDITIONAL RENDERING BLOCK ---
-  // if (!showPortfolio) {
-  //   return (
-  //     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-background to-accent-purple/5 relative overflow-hidden">
-  //       <CursorFollower />
-  //       <div className="absolute top-6 right-6 z-50">
-  //       </div>
-  //       <IDCardEntry onUnlock={handleUnlock} isUnlocked={isUnlocked} />
-  //     </div>
-  //   );
-  // }
-  // --- END REMOVE ---
-
-  // Now, the component will always directly render the main portfolio content
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-background to-accent-purple/5 relative">
       <CursorFollower />
@@ -66,7 +46,10 @@ const Index = () => {
 
           <div className="hidden md:flex items-center gap-6">
             <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
-            <a href="#clients" className="text-foreground hover:text-primary transition-colors">My Clients</a>
+            {/* Added "My Projects" link */}
+            <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">My Projects</a>
+            {/* Updated "My Clients" to "Clients" */}
+            <a href="#clients" className="text-foreground hover:text-primary transition-colors">Clients</a>
             <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">Testimonials</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
           </div>
@@ -101,8 +84,9 @@ const Index = () => {
           <div className="md:hidden bg-background/90 backdrop-blur-md pb-4 pt-2 border-t border-border">
             <div className="flex flex-col items-center gap-4">
               <a href="#about" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">About</a>
-              <a href="#clients" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Work</a>
-              <a href="#testimonials" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Clients Say</a>
+              <a href="#portfolio" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Projects</a>
+              <a href="#clients" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Clients</a>
+              <a href="#testimonials" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Testimonials</a>
               <a href="#contact" onClick={handleNavLinkClick} className="text-foreground text-lg hover:text-primary transition-colors py-2 w-full text-center">Contact</a>
             </div>
           </div>
@@ -112,7 +96,7 @@ const Index = () => {
       <main className="pt-20">
         <HeroSection />
         <AboutSection />
-        {/* <PortfolioSection /> */}
+        <PortfolioSection />
         <ClientsSection />
         <TestimonialsSection />
         <ContactSection />

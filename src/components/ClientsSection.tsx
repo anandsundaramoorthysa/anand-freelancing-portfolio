@@ -1,81 +1,63 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion"; // Import motion for animations
+import { Card } from "@/components/ui/card"; // Assuming Card component is used for styling
 
 export const ClientsSection = () => {
   const clients = [
     {
       name: 'SecumintIT',
       image: 'https://secumintit.in/assets/img/logo.webp',
-      url: 'https://secumintit.in/',
-      linkedin: 'https://www.linkedin.com/company/secumintit/',
-      service: 'Helped the company grow on LinkedIn through daily posts and engagement',
-      tag: 'LinkedIn Growth for Company'
+      description: 'Helped the company establish a strong online presence.' // Added a description
     },
     {
       name: 'SKJ Digital Media',
       image: 'https://media.licdn.com/dms/image/v2/C560BAQFszRaZYxdIyA/company-logo_200_200/company-logo_200_200/0/1631326137293?e=1753920000&v=beta&t=msmhrEcMEaeWhEHkuTStQM6lrbGWeXJTLSmr47jyOSg',
-      url: 'https://digitalizewithnandy.com/',
-      linkedin: 'https://www.linkedin.com/in/nandhineemuthu/',
-      service: 'Managed the Founder’s LinkedIn account with daily posts and engagement to enhance professional presence.',
-      tag: 'LinkedIn Personal Branding'
+      description: 'Provided digital marketing strategies and execution.' // Added a description
+    },
+    {
+      name: 'Karthik Agro Industries',
+      image: 'https://karthikagro.com/logo1.png',
+      description: 'Developed their corporate website and digital identity.' // Added a description
     },
   ];
 
   return (
-    <section id="clients" className="py-20 px-6 bg-muted/30">
+    <section id="clients" className="py-20 px-6 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          Worked With
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-foreground">
+          Companies I've <span className="text-primary">Worked With</span>
         </h2>
 
-        <div className="flex justify-center w-full"> 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mx-auto w-fit">
+        <div className="flex justify-center w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto w-full">
             {clients.map((client, index) => (
-              <div
+              <motion.div
                 key={client.name}
-                className="group relative bg-card border border-border rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 min-h-[380px] flex flex-col justify-between"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="w-full" 
               >
-                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary-500 shadow-sm bg-white">
-                  <img
-                    src={client.image}
-                    alt={`${client.name} Logo`}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+                <Card
+                  className="p-8 group hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 ease-in-out transform hover:-translate-y-2 flex flex-col justify-between items-center h-full text-center border-2 border-transparent hover:border-primary/50"
+                >
+                  <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary shadow-md bg-white flex justify-center items-center p-3">
+                    <img
+                      src={client.image}
+                      alt={`${client.name} Logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
 
-                <h3 className="font-semibold text-xl mb-1">{client.name}</h3>
-                <p className="text text-muted-foreground mb-2">{client.tag}</p>
-
-                <p className="text-md text-muted-foreground mt-2 mb-4">
-                  {client.service}
-                </p>
-
-                <div className="mt-5 flex flex-col gap-3">
-                  {client.url && (
-                    <Button
-                      asChild
-                      className="w-full text-sm"
-                      variant="default"
-                    >
-                      <a href={client.url} target="_blank" rel="noopener noreferrer">
-                        Visit Website
-                      </a>
-                    </Button>
+                  <h3 className="font-bold text-2xl text-foreground mb-2">{client.name}</h3>
+                  {client.description && (
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-grow">
+                          {client.description}
+                      </p>
                   )}
-
-                  {client.linkedin && (
-                    <Button
-                      asChild
-                      className="w-full text-sm"
-                      variant="outline"
-                    >
-                      <a href={client.linkedin} target="_blank" rel="noopener noreferrer">
-                        Visit LinkedIn
-                      </a>
-                    </Button>
-                  )}
-                </div>
-              </div>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
