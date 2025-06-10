@@ -39,7 +39,7 @@ export const PortfolioSection = () => {
           id: 1,
           title: "Karthik Agro Industries Website",
           description: "Developed a website for Karthik Agro Industries, showcasing their products, services, and company information.",
-          badges: ["React", "TypeScript", "Tailwind CSS", "Responsive Design"],
+          badges: ["React", "TypeScript", "Tailwind CSS"],
           label: "Live Site",
           liveLink: "https://karthikagro.com/",
           image: "https://karthikagro.com/logo1.png"
