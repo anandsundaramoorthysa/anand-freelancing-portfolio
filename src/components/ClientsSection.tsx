@@ -15,9 +15,9 @@ export const ClientsSection = () => {
       description: 'Provided digital marketing strategies and execution.' 
     },
     {
-      name: 'Karthik Agro',
+      name: 'Karthik & Co.,',
       image: 'https://karthikagro.com/logo1.png',
-      description: 'Developed their corporate website and digital identity.' 
+      description: 'Developed & Maintain their website.' 
     },
   ];
 

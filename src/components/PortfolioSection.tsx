@@ -37,8 +37,8 @@ export const PortfolioSection = () => {
       const websiteProjects = [
         {
           id: 1,
-          title: "Karthik Agro Website",
-          description: "Developed a website for Karthik Agro, showcasing their products, services, and company information.",
+          title: "Karthik & Co.,",
+          description: "Developed a website for Karthik & Co., showcasing their products, services, and company information.",
           badges: ["React", "TypeScript", "Tailwind CSS"],
           label: "Live Site",
           liveLink: "https://karthikagro.com/",
